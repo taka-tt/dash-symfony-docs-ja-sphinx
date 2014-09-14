@@ -1,3 +1,10 @@
+Thumbs.db
+desktop.ini
+.DS_Store
+.buildpath
+.project
+.settings
+
 temp/build/*
 temp/source/*
 tempja/build/*
@@ -17,4 +24,3 @@ symfony-docs-ja
 !tempja/source/conf.py
 !tempja/source/configurationblock.py
 !tempja/source/configurationblock.pyc
-

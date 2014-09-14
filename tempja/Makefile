@@ -12,10 +12,11 @@ PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) source
 
-.PHONY: help clean html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest
+.PHONY: help clean doc html dirhtml singlehtml pickle json htmlhelp qthelp devhelp epub latex latexpdf text man changes linkcheck doctest
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "  doc        to make standalone HTML files for Dash docset"
 	@echo "  html       to make standalone HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
@@ -35,6 +36,11 @@ help:
 
 clean:
 	-rm -rf $(BUILDDIR)/*
+
+doc:
+	$(SPHINXBUILD) -b html -D html_theme=symfony-japan-dash $(ALLSPHINXOPTS) $(BUILDDIR)/docset
+	@echo
+	@echo "Build finished. The HTML pages for docset are in $(BUILDDIR)/docset."
 
 html:
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html

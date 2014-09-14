@@ -109,6 +109,8 @@ api_url = 'http://api.symfony.com/master/%s'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'symfony-japan-docs'
+# HTML base theme for Dash docset
+#html_theme = 'symfony-japan-dash'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
