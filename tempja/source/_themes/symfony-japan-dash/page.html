@@ -10,7 +10,7 @@
 {% extends "layout.html" %}
 
 {% block header %}
-Home{{ reldelim2 }}
+<a href="{{ pathto('genindex') }}">Home</a>{{ reldelim2 }}
 <a href="{{ pathto(master_doc) }}">{{ project|e }}</a>
 {%- for parent in parents %}
 &raquo;<a href="{{ parent.link|e }}">{{ parent.title }}</a>
